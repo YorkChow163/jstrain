@@ -24,3 +24,22 @@ function Person() {
 }
 let person = new Person();
 console.log(person.username)
+
+for (var i=0;i<10;i++){
+    console.log(i)
+}
+console.log(i)//没有块级作用域
+
+function func2() {
+    ha='hahaha'
+}
+//func2不执行，ha是无法暴露的
+func2()
+//func2执行，ha暴露的
+console.log(ha)
+var hehe='hehehhe'
+function test1() {
+    console.log(hehe)//虽然外部作用域有hehe，但是内部有会先从内部查找
+    var hehe='heheeh2'
+}
+test1()
