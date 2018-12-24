@@ -98,8 +98,8 @@ class People {
 }
 
 class zhouyu extends People{
-    constructor(props) {
-        super(props);
+    constructor(name,age) {
+        super(name,age);
     }
     see(){
         console.log('yes ,i see')
