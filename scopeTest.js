@@ -24,3 +24,15 @@ var zh='szq'
 //返回内部函数
 let innerFunc = outter();
 innerFunc()
+
+var nihao='zhouyu111'
+
+function funFir() {
+    console.log(nihao)
+}
+function funSec() {
+    var nihao='zhouyu222'
+    return funFir()//函数的作用域是是定义的时候出来的，不是执行的时候出来确定的。所以是'zhouyu111'
+}
+
+var funFir1 = funSec();
