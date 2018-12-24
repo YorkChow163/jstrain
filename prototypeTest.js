@@ -84,6 +84,32 @@ child5.play.push(5)
 console.log(child5Bro.play)
 console.log(child5.play)
 
+/**
+ * es6继承:非常人类
+ */
+class People {
+    constructor(name,age){
+        this.name=name
+        this.age=age
+    }
+    say(){
+        console.log('woshipersion')
+    }
+}
+
+class zhouyu extends People{
+    constructor(props) {
+        super(props);
+    }
+    see(){
+        console.log('yes ,i see')
+    }
+}
+
+let zhouyu1 = new zhouyu('zhouyu',26);
+zhouyu1.say()
+console.log(zhouyu1)
+
 
 
 
