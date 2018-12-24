@@ -36,3 +36,7 @@ function funSec() {
 }
 
 var funFir1 = funSec();
+
+!function () {
+    console.log("匿名函数执行！！！")
+}()
