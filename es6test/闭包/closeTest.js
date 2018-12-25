@@ -15,3 +15,10 @@ inner()//1
 inner()//2
 inner()//3
 inner()//4
+
+function wecando(c,d) {
+    console.log("c"+c+",d:"+d)
+}
+obj={}
+wecando.call(obj,'zhouyu','yu')
+wecando.apply(obj,['zhouyu','yu'])
