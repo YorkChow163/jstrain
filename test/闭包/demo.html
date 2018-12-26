@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function funClose(num){
+            function inner() {
+               console.log(num)
+            }
+            return num;
+        }
+
+        window.onload=function () {
+            let names = document.getElementsByTagName("a");
+            for (let i = 0; i <names.length ; i++) {
+                  //把每个游标的放入闭包中,每次都开辟一个而独立的执行环境，
+                  //每次执行开辟一个执行环境，把不同的执行环境的指针指向不同的变量
+                names[i].onclick=funClose(i);
+            }
+        } 
+    </script>
+</head>
+<body>
+<a href="#">我是1</a>
+<a href="#">我是2</a>
+<a href="#">我是3</a>
+<a href="#">我是4</a>
+</body>
+</html>
