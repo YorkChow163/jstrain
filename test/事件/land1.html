@@ -22,9 +22,17 @@
         }
     </style>
     <script type="text/javascript">
+        function boundBtn(obj,event,callback){
+            if(obj.addEventListener){
+                obj.addEventListener(event,callback,false);
+            }else {
+                obj.attachEvent("on"+event);
+            }
+        }
         window.onload=function () {
             let outter = document.getElementById("outter");
             let inner = document.getElementById("inner");
+            let butn = document.getElementById("butn");
             //box2鼠标移入事件
             inner.onmouseenter=function () {
                 outter.style.left='0px'
@@ -34,14 +42,19 @@
                 outter.style.left='-300px'
             }
 
-
-        }
+            //绑定事件
+            boundBtn(butn,"click",function () {
+                alert("hahaha!!!")
+            })
+        };
     </script>
 </head>
 <body>
 <div id="outter">
     <div id="inner"></div>
 </div>
+
+<button id="butn">我是一个按钮</button>
 
 </body>
 </html>
