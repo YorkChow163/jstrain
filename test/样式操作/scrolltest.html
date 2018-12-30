@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #outter{
+            border: red 2px solid;
+            overflow: auto;
+            width: 100px;
+            height: 100px;
+        }
+        #di{
+            border: red 2px solid;
+            width: 200px;
+            height: 200px;
+        }
+        #did{
+            margin-top: 10px;
+            height: 100px;
+            background: aqua;
+        }
+
+    </style>
+    <script type="text/javascript">
+        window.onload=function () {
+            var outter=document.getElementById("outter");
+            outter.onscroll=function () {
+                if(this.scrollHeight-this.scrollTop===this.clientHeight){
+                     alert('滚到底了')
+                }
+
+            };
+            //点击子元素的，事件会传递到父元素，事件的向上传导
+            var di=document.getElementById("di");
+            var did=document.getElementById("did");
+            di.onclick=function () {
+                alert("我是div点击")
+            }
+            did.onclick=function (event) {
+                event=event|| window.event
+                alert("我是p点击")
+                //阻止冒泡
+                event.cancelBubble=true
+            }
+            document.body.onclick=function () {
+                alert("我是body点击")
+            }
+        };
+    </script>
+</head>
+<body>
+<h3>用户协议</h3>
+<div id="outter">
+    <p id="info">
+        zhouzhdfshdjfkjd
+        zhouzhdfshdjfkjd
+        zhouzhdfshdjfkjd
+        zhouzhdfshdjfkjd
+        zhouzhdfshdjfkjd
+        zhouzhdfshdjfkjd
+        zhouzhdfshdjfkjd
+        zhouzhdfshdjfkjd
+        zhouzhdfshdjfkjd
+        zhouzhdfshdjfkjd
+        zhouzhdfshdjfkjd
+        zhouzhdfshdjfkjd
+        zhouzhdfshdjfkjd
+        zhouzhdfshdjfkjd
+        zhouzhdfshdjfkjd
+        zhouzhdfshdjfkjd
+        zhouzhdfshdjfkjd
+    </p>
+</div>
+我已经阅读以上协议<input type="checkbox"/> <input type="button" value="注册"/>
+
+<div id="di" style="position: relative">
+    我是div
+    <span id="did">我是sapn</span>
+</div>
+
+</body>
+</html>
