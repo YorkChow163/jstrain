@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>侧边栏1</title>
+    <style type="text/css">
+        #outter{
+            background: #ffa08a;
+            width:300px;
+            height: 350px;
+            left: -300px;
+            top: 200px;
+            position: absolute;
+        }
+        #inner{
+            background: red;
+            width: 100px;
+            height: 50px;
+            top: 150px;
+            left: 300px;
+            position: absolute;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload=function () {
+            let outter = document.getElementById("outter");
+            let inner = document.getElementById("inner");
+            //box2鼠标移入事件
+            inner.onmouseenter=function () {
+                outter.style.left='0px'
+            }
+            //鼠标移除事件
+            outter.onmouseleave=function () {
+                outter.style.left='-300px'
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+<div id="outter">
+    <div id="inner"></div>
+</div>
+
+</body>
+</html>
