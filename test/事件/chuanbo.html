@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件的传播</title>
+    <style type="text/css">
+        #box1 {
+            width: 300px;
+            height: 300px;
+            background: red;
+        }
+
+        #box2 {
+            width: 200px;
+            height: 200px;
+            background: blue;
+        }
+
+        #box3 {
+            width: 100px;
+            height: 100px;
+            background: green;
+        }
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            let box1 = document.getElementById("box1");
+            let box2 = document.getElementById("box2");
+            let box3 = document.getElementById("box3");
+            let ulpa = document.getElementById("ulpa");
+            let btn = document.getElementById("btn");
+            /*    box1.onclick=function () {
+
+                }
+
+                box2.onclick=function () {
+
+                }
+
+                box3.onclick=function () {
+
+                }*/
+            box1.addEventListener("click", function () {
+                alert("1")
+            }, true)
+            box2.addEventListener("click", function () {
+                alert("2")
+            }, true)
+            box3.addEventListener("click", function () {
+                alert("3")
+            }, true)
+            //点击事件(事件的委派，所以的子元素都会获得)
+            ulpa.onclick=function (event) {
+                event=event||window.event
+                alert(event.target.className)
+            }
+            btn.onclick=function () {
+
+                let li = document.createElement("li");
+                li.innerHTML='<a class=\"abc\" href=\"javascrispt:;\">草连接1</a>';
+                ulpa.appendChild(li)
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="box1">
+    <div id="box2">
+        <div id="box3"></div>
+    </div>
+</div>
+<ul id="ulpa">
+    <li><a class="abc" href="javascrispt:;">草连接1</a></li>
+    <li><a class="abc" href="javascrispt:;">草连接2</a></li>
+    <li><a class="abc" href="javascrispt:;">草连接3</a></li>
+    <li><a class="abc" href="javascrispt:;">草连接4</a></li>
+    <li><a class="abc" href="javascrispt:;">草连接5</a></li>
+</ul>
+<button id="btn">添加也给阿牛</button>
+
+</body>
+</html>
