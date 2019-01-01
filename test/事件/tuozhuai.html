@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拖拽练习</title>
+    <style type="text/css">
+        #box1{
+            width: 100px;
+            height: 100px;
+            background: #ffa08a;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload=function () {
+            let inp = document.getElementById("in1");
+            //输入的文本是按键事件之后
+            inp.onkeydown=function (event) {
+                event=event||window.event
+                if(event.keyCode>=48||event.keyCode<=57){
+                    //如果是数字键盘
+                    return false;
+                }
+                
+            }
+            
+        }
+    </script>
+</head>
+<body>
+<div id="box1">
+    <input id="in1" type="text">
+</div>
+
+</body>
+</html>
