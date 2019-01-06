@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定时和延时</title>
+    <script type="text/javascript">
+        window.onload=function () {
+            let ad = document.getElementById("ad");
+            let num=0;
+            let timeler=setInterval(function () {
+                ad.innerHTML=num++;
+                if(num==15){
+                    clearInterval(timeler)
+                }
+            },1000)
+        };
+
+    </script>
+</head>
+<body>
+    <a id="ad">1</a>
+</body>
+</html>

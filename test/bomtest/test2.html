@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            background: red;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload=function () {
+            let code=0;
+            setInterval(function () {
+                switch (code){
+                    case 37:
+                        break;
+                    case 38:
+                        break;
+                    case 39:
+                        break;
+                    case 40:
+                        break;
+                }
+            },30)
+            document.onkeydown=function (event) {
+                event=event||window.event
+                code=event.keyCode;
+            }
+            document.onkeyup=function () {
+                code=0;
+            }
+            
+        }
+        
+    </script>
+</head>
+<body>
+<div id="div1">
+</div>
+
+</body>
+</html>
