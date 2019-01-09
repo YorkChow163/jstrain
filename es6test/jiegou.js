@@ -59,3 +59,26 @@ console.log(bar1)
 
 let x;
 ({x}={x:123})
+
+/**
+ * 字符串解构赋值
+ * */
+let {length: len}='zhouyu'
+console.log("zhouyu.length",len)
+
+/**
+ * 函数的参数解构赋值
+ * */
+function  fun1([h=0,j=0]) {
+    console.log(h,j)
+}
+fun1([1,undefined])
+
+function fun2({x=0,y=1}={}) {
+    console.log(x,y)
+    return [x,y]
+}
+fun2()
+fun2({x:3,y:4})
+
+
