@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #test{
+            background: green;
+            height: 100px;
+            margin: 100px;
+        }
+        /*目标伪类:找到id为testd的元素，改变其css*/
+        #test:target{
+           background: blue;
+        }
+    </style>
+</head>
+<body>
+<a href="#test">锚链接</a>
+<div id="test">
+    hahah
+</div>
+</body>
+</html>

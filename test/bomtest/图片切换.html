@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .wrapper{
+            width: 540px;
+            margin: 0 auto;
+        }
+        body ul{
+            padding: 0;
+            margin: 0;
+        }
+        #banner{
+            position: relative;
+        }
+        /*通过绝对定位让所有的img元素显示在同一个位置*/
+        #banner li img{
+            position: absolute;
+            /*支持移动端*/
+            top: 0;
+            left: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+ <div class="wrapper">
+     <!--banner图-->
+     <ul id="banner">
+         <li><img src="img/jd001.jpg" alt=""></li>
+         <li><img src="img/jd002.jpg" alt=""></li>
+         <li><img src="img/jd003.jpg" alt=""></li>
+         <li><img src="img/jd004.jpg" alt=""></li>
+         <li><img src="img/jd005.jpg" alt=""></li>
+         <li><img src="img/jd006.jpg" alt=""></li>
+     </ul>
+     <!--缩略图-->
+
+ </div>
+</body>
+</html>
