@@ -82,3 +82,19 @@ fun2()
 fun2({x:3,y:4})
 
 
+let map = new Map();
+map.set("m1","zhouyu")
+map.set("m2","szq")
+for (let [key,value] of map){
+    console.log(key,value)
+}
+
+for (let [key] of map){
+    console.log(key)
+}
+
+for ( let[,value] of  map){
+    console.log(value)
+}
+
+
