@@ -64,3 +64,49 @@ function fun3(...argu) {
     console.log('sum',sum)
 }
 fun3(1,2,3)
+
+/*
+箭头函数
+ */
+let f1=(id)=>{ return 1+id}
+console.log(f1(1))
+
+//返回一个对象,加上括号
+let f2=(id)=>({id:id,name:'zhouyu'})
+console.log(f2(1))
+
+//可以使用解构函数和箭头函数一起用
+let f3=({id,name})=>{ return id+name}
+let person={ id: 1, name: 'zhouyu' }
+console.log(f3(person))
+
+let newArra=[1,2,3].map(x=>x*x);
+console.log(newArra)
+
+//箭头函数的this总是指向定义的时候的对象：箭头函数没有自己的this,他的this完全是外部的，所以不能当做构造函数;不能使用apply/bind/call函数绑定this
+function Timer() {
+    this.s1 = 0;
+    this.s2 = 0;
+    // 箭头函数，this总是指向内部对象timer
+    setInterval(() => this.s1++, 1000);
+    // 普通函数，this指向全局
+    setInterval(function () {
+        this.s2++;
+    }, 1000);
+}
+
+var timer = new Timer();
+
+setTimeout(() => console.log('s1: ', timer.s1), 3100);
+setTimeout(() => console.log('s2: ', timer.s2), 3100);
+
+/**
+ * 冒号运算符，取代appy,bind,call,左边是一个对象，右边是一个函数，调用时将函数函数的上下文变成对象
+ */
+
+let arr1=[1,2,3,4]
+let arr2=[1,2,3,4]
+arr1.push(...arr2)
+console.log(arr1);
+
+    
