@@ -12,15 +12,34 @@
             padding: 0;
             margin: 0;
         }
-        #banner{
+        .banner{
             position: relative;
+            height: 340px;
         }
         /*通过绝对定位让所有的img元素显示在同一个位置*/
-        #banner li img{
+        .banner li img{
             position: absolute;
-            /*支持移动端*/
             top: 0;
             left: 0;
+        }
+        /*都隐藏*/
+        .banner li{
+            visibility: hidden;
+        }
+        /*结构伪类：第一个元素显式,其他的隐藏*/
+        .banner li:first-child{
+            visibility: visible;
+        }
+        .banner li:target{
+            visibility: visible;
+        }
+        /*并排浮动*/
+        .thumbnail li{
+             float: left;
+             width: 90px;
+        }
+        .thumbnail li:hover{
+            opacity: .5;
         }
         ul{
             list-style: none;
@@ -33,15 +52,24 @@
 <body>
  <div class="wrapper">
      <!--banner图-->
-     <ul id="banner">
-         <li><img src="img/jd001.jpg" alt=""></li>
-         <li><img src="img/jd002.jpg" alt=""></li>
-         <li><img src="img/jd003.jpg" alt=""></li>
-         <li><img src="img/jd004.jpg" alt=""></li>
-         <li><img src="img/jd005.jpg" alt=""></li>
-         <li><img src="img/jd006.jpg" alt=""></li>
+     <ul class="banner">
+         <li id="jd001"><img src="img/jd001.jpg" alt=""></li>
+         <li id="jd002"><img src="img/jd002.jpg" alt=""></li>
+         <li id="jd003"><img src="img/jd003.jpg" alt=""></li>
+         <li id="jd004"><img src="img/jd004.jpg" alt=""></li>
+         <li id="jd005"><img src="img/jd005.jpg" alt=""></li>
+         <li id="jd006"><img src="img/jd006.jpg" alt=""></li>
      </ul>
      <!--缩略图-->
+     <ul  class="thumbnail">
+         <!--锚链接就是另外一个元素的id-->
+         <li><a href="#jd001"><img src="img/jd001.jpg" alt=""></a></li>
+         <li><a href="#jd002"><img src="img/jd002.jpg" alt=""></a></li>
+         <li><a href="#jd003"><img src="img/jd003.jpg" alt=""></a></li>
+         <li><a href="#jd004"><img src="img/jd004.jpg" alt=""></a></li>
+         <li><a href="#jd005"><img src="img/jd005.jpg" alt=""></a></li>
+         <li><a href="#jd006"><img src="img/jd006.jpg" alt=""></a></li>
+     </ul>
 
  </div>
 </body>
