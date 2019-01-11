@@ -1,5 +1,5 @@
 /**
- * Array.from任何有length属性的对象，都可以通过Array.from方法转为数组，而此时扩展运算符就无法转换。
+ * Array.from任何有length属性的对象，都可以通过Array.from方法转为数组，而此时扩展运算符就无法转换。Array.from方法会将数组的空位，转为undefined, ...也是
  */
 
 let arrayLike = {
@@ -30,3 +30,38 @@ console.log(arra)
 let anies = new Array(3).fill([]);
 anies[0].push(5)
 console.log(anies)//全部是5
+
+/**
+ * entries keys values
+ */
+let aray=['z','h','o','u']
+for (let k of aray.keys()){
+    console.log(k)
+}
+for (let [index, elem] of aray.entries()) {
+    console.log(index, elem);
+}
+
+/**
+ * includes()
+ * */
+
+console.log(aray.includes('z'))
+console.log(aray.includes(NaN))
+console.log(aray.includes('z',-2))
+
+/**
+ * every()some():每个都符合或者至少一个符合
+ * */
+let flatArray=[1,2,3,4,5,6]
+let b1=flatArray.every((item,index,arr)=>{
+  return  item %2==0
+})
+let b2=flatArray.some((item,index,arr)=>{
+   return  item %2==0
+})
+
+console.log(b1)
+console.log(b2)
+
+
