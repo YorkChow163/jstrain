@@ -53,7 +53,7 @@ obj1.a.b=2
 console.log(obj2)
 
 /**
- * 用途
+ * setPrototypeOf(),设置对象的原型
  */
 //为对象增加属性和方法
 class  Person {
@@ -66,6 +66,11 @@ console.log(person)
 
 let mypro={}
 let per={
-
+    x:20
 }
-
+Object.setPrototypeOf(per,mypro)
+mypro.fun1=function () {
+    console.log('hahahaha')
+}
+mypro.y=2
+console.log(per.y)
