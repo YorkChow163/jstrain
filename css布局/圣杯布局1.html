@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圣杯布局1</title>
+    <style>
+        *{margin:0;padding:0;}
+        body{background-color: #cccc;text-align:center;}
+        header{height:50px;background-color: pink;line-height:50px;}
+        .container{padding:0 220px 0 200px;}
+        .middle,.left,.right{
+            float: left;
+            min-height: 300px;
+        }
+        .middle{background-color: red;width:100%;}
+        .left{width:200px;background-color: yellow;margin-left: -200px}
+        .right{width:220px;background-color: blue;margin-right: -220px}
+    </style>
+</head>
+<body>
+<header>
+    <h2>我是header</h2>
+</header>
+  <div class="container">
+      <div class="left">left</div>
+      <div class="middle">middle</div>
+      <div class="right">right</div>
+  </div>
+</body>
+</html>
