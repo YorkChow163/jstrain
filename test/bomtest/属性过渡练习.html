@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    html, body{
+        padding: 0;
+        margin: 0;
+        height: 100%
+    }
+    .wrapper{
+        position: relative;
+        width: 450px;
+        margin: 0 auto;
+        height: 100%;
+    }
+    .ouuter{
+        background: #ffa08a;
+    }
+    .ouuter img{
+        vertical-align: middle;
+    }
+    .mask{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .2);
+    }
+    .mask-show{
+        width: 100%;
+        transition: .3s linear;
+    }
+</style>
+<body>
+<div class="wrapper">
+     <div class="ouuter">
+         <img id="tolgole" src="img/icon_list.png">
+     </div>
+     <div id="mask" class="mask">
+     </div>
+</div>
+<script>
+    let tolgole = document.querySelector("#tolgole");
+    let mask = document.querySelector("#mask");
+    tolgole.onclick=function () {
+        //点击图片，浮层属性过渡展开
+        mask.classList.toggle('mask-show')
+    }
+    mask.onclick=function () {
+        //点击浮层，浮层消失
+        mask.classList.remove('mask-show')
+    }
+</script>
+</body>
+</html>
