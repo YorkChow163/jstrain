@@ -64,4 +64,25 @@ let b2=flatArray.some((item,index,arr)=>{
 console.log(b1)
 console.log(b2)
 
+/*
+const obj = {
+    sex,
+    zhoyume(){
+
+    },
+    class () {}
+};
+console.log(JSON.stringify(obj))
+*/
+
+
+const Person = {
+
+    name: '张三',
+    // 等同于hello: function ()...
+    hello() { console.log('我的名字是', this.name); }
+};
+
+console.log(Person);
+
 
