@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性过渡</title>
+    <style>
+        .div{
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: 1s,linear,1s;
+        }
+        .div:hover{
+            width: 200px;
+            height: 200px;
+            background: green;
+            transition-property: width,height;
+            transition-duration: 1s,1s;
+            transition-timing-function: linear;
+        }
+    </style>
+</head>
+<body>
+<div class="div">
+
+</div>
+
+</body>
+</html>
