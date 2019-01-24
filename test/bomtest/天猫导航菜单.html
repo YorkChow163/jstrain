@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .menu {
+            list-style: none;
+        }
+
+        .imgIcon {
+            /*i是行内元素，要想设置宽高，要练成块级元素*/
+            display: inline-block;
+            width: 40px;
+            height: 15px ;
+            background: url("./img/tmall.png") no-repeat;
+            background-size: 40px 15px;
+            /*要让图片脱离文档流，避免挤占空间，提升一个层级*/
+            position: absolute;
+            /*绝对定位相对偏移的位置，把图片设置到包含元素左边缘向右一定位置*/
+            top: 0;
+            left: 30px;
+            /*层叠样式，置于最底层*/
+            z-index: -1;
+        }
+
+        .menu li {
+            float: left;
+            width: 100px;
+            height: 36px;
+            background-color: red;
+            /*行高*/
+            line-height: 36px;
+            /*s文本水平居中*/
+            text-align: center;
+            position: relative;
+        }
+
+        .menu li a {
+            text-decoration: none;
+        }
+        /*元素向上位移,是负值*/
+        .menu li:hover .imgIcon{
+            transform: translateY(-10px);
+        }
+    </style>
+</head>
+<body>
+<div>
+    <ul class="menu">
+        <li><i class="imgIcon"></i><a href="#">苹果</a></li>
+        <li><i class="imgIcon"></i><a href="#">香蕉</a></li>
+        <li><i class="imgIcon"></i><a href="#">梨子</a></li>
+    </ul>
+</div>
+</body>
+</html>
