@@ -40,7 +40,7 @@ promise1.then((msg)=>{
 })
 
 /**
- * promise.all(args)方法:接受一个包含promise数组的参数，依次后按照顺序执行返回。只有参数里面都是fulfilled成功才会成功
+ * promise.all(args)方法:接受一个包含promise数组的参数，同时执行返回，但是顺序确实有序的。只有参数里面都是fulfilled成功才会成功
  * */
 let arr=[1,2,3]
 let newAttr = arr.map((data)=>{
