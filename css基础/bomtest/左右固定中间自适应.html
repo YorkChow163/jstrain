@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        /*右固定，左自适应：左元素负边距，两个都浮动*/
+        .content{
+            float: left;
+            margin-right: -200px;
+            /*注意：制作自适应的页面，不要给布局元素设置高度，应该通过内容撑开， 此处设置200Px仅仅是演示效果*/
+            height: 200px;
+            width: 100%;
+            background-color: orange;
+        }
+        .aside{
+            float: left;
+            height: 200px;
+            width: 200px;
+            background-color: blue;
+        }
+        /*左固定有自适应：左浮动，右overflow*/
+        /*包裹器左侧*/
+        .container{
+          margin-right: 200px;
+        }
+        .nav{
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+            /*设置浮动，让相邻元素站位*/
+            float: left;
+        }
+        .contentTxt{
+            background-color: #cd4606;
+            height: 200px;
+            /*开启BFC，不计算浮动元素宽度*/
+            overflow: hidden;
+        }
+    </style>
+
+    <!--cc:ie 快速生成条件注释-->
+    <!--只在IE6以下浏览器生效-->
+    <!--[if lte IE 6]>
+    <style type="text/css">
+        .content{
+            display: inline;
+        }
+    </style>
+    <![endif]-->
+</head>
+<body>
+<div class="content">
+    <div class="container">
+        <div class="nav">
+
+        </div>
+        <div class="contentTxt">
+
+        </div>
+    </div>
+
+</div>
+<div class="aside">
+
+</div>
+</body>
+</html>
