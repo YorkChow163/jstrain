@@ -25,8 +25,11 @@
     column-reverse：纵轴方向从下到上
   ```
   column
+  
   ![](.note_images\flex-direction_column.png)
+  
   row-reverse
+  
   ![](.note_images\flex-direction_raw-reverse.png)
   
   * flex-wrap
