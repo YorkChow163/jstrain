@@ -15,17 +15,24 @@
  * 有容器和项目构成
  
 ## 容器的属性
-  * flex-direction
+  * flex-direction：项目沿着主轴方向的排列方式
   
   ```text
-    项目沿着主轴方向的排列方式
     
-    flex-direction: row | row-reverse | column | column-reverse;
+    row ：主抽方向从左到右,默认
+    row-reverse ：从右到左
+    column：纵轴方向从上到下
+    column-reverse：纵轴方向从下到上
   ```
+  column
+  ![](.note_images\flex-direction_column.png)
+  row-reverse
+  ![](.note_images\flex-direction_raw-reverse.png)
+  
   * flex-wrap
   
   ```text
-    默认情况下，项目都是沿着一条主轴先排列，该属性规定了排列不下如何换行
+    默认情况下，项目都是沿着一条主轴先排列，该属性规定了排列不下如何换行,wrap:保持原来的项目宽度，排列不下换行
     
     flex-wrap: nowrap | wrap | wrap-reverse;
 ```
