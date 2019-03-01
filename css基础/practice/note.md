@@ -26,11 +26,11 @@
   ```
   column
   
-  ![11](.note_images\flex-direction_column.png)
+  ![](.note_images/flex-direction_column.png)
   
   row-reverse
   
-  ![22](.note_images\flex-direction_raw-reverse.png)
+  ![](.note_images/flex-direction_raw-reverse.png)
   
   * flex-wrap
   
