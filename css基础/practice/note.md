@@ -14,7 +14,8 @@
 # flex概述
  * 有容器和项目构成
  
-## 容器的属性
+## 容器的属性，参考[这里](https://www.jianshu.com/p/967dcacf0220)
+
   * flex-direction：项目沿着主轴方向的排列方式
   
   ```text
@@ -28,34 +29,47 @@
   ![](./pasteimg/2019-03-01-15-25-01.png)
   ![](./pasteimg/2019-03-01-15-27-09.png)
   
-  ```text
-    默认情况下，项目都是沿着一条主轴先排列，该属性规定了排列不下如何换行,wrap:保持原来的项目宽度，排列不下换行
-    
-    flex-wrap: nowrap | wrap | wrap-reverse;
-```
+  * flex-wrap:项目沿着主轴方向如何排列换行
+
+  ```text 
+    nowrap：子项目不换行
+    wrap：子项目保持原来的宽度，排列不下就换行
+    wrap-reverse：排列不下就换行，反方向换行 
+  ```
+
+   ![](./pasteimg/2019-03-01-15-45-25.png)
+
   * flex-flow
+
   ```text
-    cd
-```
-  * justify-content
+    是flex-direction和flex-flow的属性
+
+  ```
+
+  * justify-content：定义了项目沿主轴的对齐方式
   
   ```text
-   定义了项目沿主轴的对齐方式
-   
-   ustify-content: flex-start | flex-end | center | space-between | space-around;
-```
-  * align-items
+    flex-start：沿着主轴方向行的起始位置对齐
+    flex-end： 沿着主轴方向行的终止位置对齐
+    center：沿着主轴方向行的中间位置对齐
+    space-between： 项目沿着主轴方向各自保持相等的距离
+    space-around：均匀散步
+  ```
+  ![](./pasteimg/2019-03-01-17-03-20.png)
+
+  * align-items:定了项目在交叉轴上的对齐方式
   
   ```text
-   定了项目在交叉轴上的对齐方式
-   
-   align-items: flex-start | flex-end | center | baseline | stretch;
-```
-  * align-content
-  
-  ```text
-   定义了多根轴线的对齐方式
-```
+    flex-start：与交叉轴开始的位置对齐
+    flex-end：与交叉轴结束的位置对齐
+    center: 与交叉轴的中间位置对齐
+    baseline: 
+    stretch: 默认值，子项目未设置高度或者高度为auto,将高度设置为行高。
+  ```
+  ![](./pasteimg/2019-03-01-17-20-27.png)
+
+  * align-content:多行的情况下，用于多行的在侧轴上的对齐方式与align-items类似
+  ![](./pasteimg/2019-03-01-17-27-12.png)
 
 ## 项目的属性值
  * order：定义项目的排列顺序。数值越小，排列越靠前
