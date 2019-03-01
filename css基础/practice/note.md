@@ -24,15 +24,9 @@
     column：纵轴方向从上到下
     column-reverse：纵轴方向从下到上
   ```
-  column
-  
-  ![](.note_images/flex-direction_column.png)
-  
-  row-reverse
-  
-  ![](.note_images/flex-direction_raw-reverse.png)
-  
-  * flex-wrap
+
+  ![](./pasteimg/2019-03-01-15-25-01.png)
+  ![](./pasteimg/2019-03-01-15-27-09.png)
   
   ```text
     默认情况下，项目都是沿着一条主轴先排列，该属性规定了排列不下如何换行,wrap:保持原来的项目宽度，排列不下换行
