@@ -2,9 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>没有能不能，只有想不想</title>
+    <style>
+        .parent::after {
+            /* height: 200px; */
+            /*overflow: auto;*/
+            background: brown;
+        }
+
+        .parent {
+            background: brown;
+           /* clear: both;
+            content: "";
+            display: table;*/
+        }
+
+        .content {
+            height: 80px;
+            float: left;
+            background: blue;
+            width: 200px;
+        }
+
+        .right {
+            float: right;
+            height: 50px;
+            background: blueviolet;
+            width: 200px;
+        }
+
+        .footer {
+            background: darkgreen;
+            height: 20px;
+            width: 100%;
+        }
+
+        .outwall{
+            clear: both;
+        }
+        .innerwall{
+            clear: both;
+        }
+
+
+    </style>
 </head>
 <body>
-$END$
+<div class="parent">
+    <div class="content">box1:我是大佬，我往左边站</div>
+    <div class="right">box2:我是老板的大娘子，我在右边站</div>
+   <!-- <div class="innerwall">box5:我是老板的孩子，但是我也算是大佬</div>-->
+</div>
+<!--<div  class="outwall" >box4:我说管家,佬和小喽啰中间总是有一堵墙分开的</div>-->
+<div class="footer">box3:我是页脚， 你们都是大佬</div>
 </body>
 </html>
