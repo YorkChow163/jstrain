@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body {
+            background: url("img/bg.jpg") fixed no-repeat;
+            background-size: 100% 100%;
+        }
+        img {
+            width: 100px;
+            height: 150px;
+            border: 5px ;
+            background: cornsilk;
+        }
+    </style>
+</head>
+<body>
+<div class="back">
+    <img src="img/1.jpg" alt="">
+    <img src="img/2.jpg" alt="">
+    <img src="img/3.jpg" alt="">
+    <img src="img/4.jpg" alt="">
+    <img src="img/5.jpg" alt="">
+</div>
+<script type="text/javascript">
+    let img = document.querySelectorAll('img');
+    for (let i = 0; i < img.length; i++) {
+        let imgElement = img[i];
+        if(i%2 == 0){
+            imgElement.style.transform="rotate("+getrundom(30)+"deg)"
+        }else {
+            imgElement.style.transform="rotate("+ -getrundom(30)+"deg)"
+        }
+
+
+    }
+    function getrundom(num) {
+       return Math.round(Math.random()*num);
+    }
+</script>
+</body>
+</html>

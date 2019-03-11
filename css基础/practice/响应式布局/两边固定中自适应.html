@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .nav, .content, .rig{
+            height: 100px;
+            float: left;
+        }
+        .nav, .rig{
+            background: red;
+            width: 200px;
+        }
+        .content{
+            background: green;
+            width: calc(100% - 400px);
+        }
+
+        /*响应式布局：宽度小于768样式调整*/
+        @media screen  and (max-width: 768px){
+            .nav, .rig{
+                background: fuchsia;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="con">
+    <div class="nav"></div>
+    <div class="content"></div>
+    <div class="rig"></div>
+</div>
+</body>
+</html>
