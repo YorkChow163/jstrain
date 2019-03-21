@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<header>登录</header>
+<div class="wrapper">
+    <form>
+        <div class="form-group">
+            <label for="name">姓名</label>
+            <input id="name" type="text" name="name" placeholder="输入姓名">
+            <span id="errorMsg">手机号格式错误</span>
+        </div>
+        <div class="form-group">
+            <label for="tel">电话</label>
+            <input id="tel" type="tel" name="telnum" placeholder="输入验证码">
+            <button id="getCode">获取验证码</button>
+        </div>
+    </form>
+</div>
+<input id="button" type="button" value="提交">
+</body>
+</html>
