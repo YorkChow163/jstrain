@@ -31,3 +31,29 @@ header a img{
 header a img,header a span{
     vertical-align: middle;
 }
+
+#binner img{
+    width: 100%;
+}
+.goods{
+    padding: .16rem .08rem;
+    background: white;
+}
+
+.goodtile{
+   display: flex;
+}
+.goodtile span:first-child{
+    background: #468847;
+    flex-basis: 2rem;
+    padding: .1rem  .1rem;
+    color: white;
+    text-align: center;
+}
+.goodtile span:last-child{
+    border: .01rem solid #468847;
+    padding: .1rem  .1rem;
+    text-align: center;
+    color: #468847;
+    flex-grow: 1;
+}
