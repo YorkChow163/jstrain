@@ -1,59 +1,90 @@
-#wrapper{
+#wrapper {
     margin: 0 auto;
     min-width: 300px;
     max-width: 640px;
 }
-header{
+
+header {
     background: #333333;
     overflow: hidden;
     vertical-align: center;
 }
-header a:first-child{
+
+header a:first-child {
     float: left;
 
 }
 
-header a:last-child{
+header a:last-child {
     float: right;
     border-left: 1px solid white;
     padding: 0 .15rem;
 }
-header a{
+
+header a {
     color: white;
 }
 
-header a img{
+header a img {
     width: .3rem;
     height: .3rem;
-    margin: .1rem .05rem ;
+    margin: .1rem .05rem;
 }
+
 /*子元素内容垂直居中*/
-header a img,header a span{
+header a img, header a span {
     vertical-align: middle;
 }
 
-#binner img{
+#binner img {
     width: 100%;
 }
-.goods{
+
+.goods {
     padding: .16rem .08rem;
-    background: white;
+    background: gainsboro;
 }
 
-.goodtile{
-   display: flex;
+.goodtile {
+    display: flex;
 }
-.goodtile span:first-child{
+
+.goodtile span:first-child {
     background: #468847;
     flex-basis: 2rem;
-    padding: .1rem  .1rem;
+    padding: .1rem .1rem;
     color: white;
     text-align: center;
 }
-.goodtile span:last-child{
+
+.goodtile span:last-child {
     border: .01rem solid #468847;
-    padding: .1rem  .1rem;
+    padding: .1rem .1rem;
     text-align: center;
     color: #468847;
     flex-grow: 1;
 }
+
+.goodlist ul {
+    overflow: hidden;
+    margin-top: .2rem;
+}
+
+.goodlist ul li {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+}
+/*防止图片溢出，宽度填满*/
+.goodlist ul li img{
+    width: 100%;
+}
+.goodlist ul li:nth-child(odd){
+    padding-left: .04rem;
+
+}
+.goodlist ul li:nth-child(even){
+    padding-right: .04rem;
+}
+
+
