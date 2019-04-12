@@ -1,3 +1,6 @@
+img{
+    vertical-align: middle;
+}
 #wrapper {
     margin: 0 auto;
     min-width: 300px;
@@ -75,16 +78,34 @@ header a img, header a span {
     width: 50%;
     box-sizing: border-box;
 }
+
 /*防止图片溢出，宽度填满*/
-.goodlist ul li img{
+.goodlist ul li img {
     width: 100%;
 }
-.goodlist ul li:nth-child(odd){
+
+.goodlist ul li:nth-child(odd) {
     padding-left: .04rem;
 
 }
-.goodlist ul li:nth-child(even){
+
+.goodlist ul li:nth-child(even) {
     padding-right: .04rem;
+}
+
+.gooditem {
+    padding: .1rem .1rem;
+    background: white;
+    overflow: hidden;
+    line-height: .3rem;
+}
+.price{
+    color: #cd4606;
+    font-size: .2rem;
+    float: left;
+}
+.location{
+    float: right;
 }
 
 
