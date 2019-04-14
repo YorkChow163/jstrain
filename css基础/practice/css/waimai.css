@@ -1,7 +1,7 @@
 img{
     vertical-align: middle;
 }
-#wrapper {
+.wrapper {
     margin: 0 auto;
     min-width: 300px;
     max-width: 640px;
@@ -107,5 +107,40 @@ header a img, header a span {
 .location{
     float: right;
 }
+footer{
+    position: fixed;
+    background: rebeccapurple;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255,255,255,.4);
+}
+.fanimg{
+    width: .5rem;
+    height: .5rem;
+    position: relative;
+    top: -.2rem;
+    border-radius: 50%;
+    margin-left: .08rem;
+}
+.wrapper-foot{
+    position: relative;
+}
 
+.selected{
+    position: absolute;
+    top: -.4rem;
+    left: .3rem;
+}
+.clickok{
+    float: right;
+    border:.01rem solid green;
+    padding: .05rem .08rem;
+    font-size: .2rem;
+    color: #468847;
+    margin-top: 0.05rem;
+}
+.description{
+
+}
 
