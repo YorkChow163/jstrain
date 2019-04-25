@@ -2,9 +2,8 @@
 ## 浮动会导致父元素高度塌陷
    `浮动` 会使得元素与上浮的效果，但是会导致前后的兄弟元素、父元素的位置和宽高没有达到预定的期望
 ## 清除浮动示例
-   [参考一](https://www.jianshu.com/p/3772453568ad) 
-
-   [参考二](http://zh.learnlayout.com/clear.html)
+- 浮动导致的父元素高度塌陷或者溢出，在父元素使用overflow:hidden来清除浮动[参考一](https://www.jianshu.com/p/3772453568ad) 
+- 浮动导致兄弟元素位置变化，在兄弟元素使用clear:both/lest/right来清除浮动[参考二](http://zh.learnlayout.com/clear.html)
 # 负外边距
 ## 特性
 * 在static元素中使用负边距:当一个元素在top/left使用负边距时，它把元素向这个特定的方向拉；但是当你将负边距设置为相对bottom/right时，它并不会把元素向下或右拉，相反，它会把后面的元素往里面拉，从而覆盖自己。
