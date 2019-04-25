@@ -1,0 +1,51 @@
+.wrapper {
+    padding: 0 .08rem;
+}
+
+.yiwancheng {
+    background: ghostwhite;
+    overflow: hidden;
+}
+
+.yiwancheng img {
+    width: .425rem;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.progreece {
+    clear:left;
+    display: flex;
+    justify-content: space-between;
+    padding: .2rem 0;
+    position: relative;
+}
+.progreece:before{
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: .01rem;
+    position: absolute;
+    background: #333333;
+    left: 0;
+    top: .27rem;
+    z-index: -1;
+}
+
+.circle {
+    border: .01rem solid red;
+    border-radius: 50%;
+    width: .14rem;
+    height: .14rem;
+    position: relative;
+    z-index: 1;
+    background: white;
+}
+
+.point {
+    width: .10rem;
+    height: .10rem;
+    background: green;
+    border-radius: 50%;
+    margin: .02rem;
+}

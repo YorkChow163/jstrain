@@ -1,0 +1,60 @@
+header{
+    background: black;
+    text-align: center;
+    color: red;
+    line-height: 2.2em;
+}
+/*包裹器*，指定页面最大宽度和最小宽度*/
+.wrapper{
+    min-width: 300px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+body{
+    background: aliceblue;
+}
+
+form{
+    margin: .8em 0;
+}
+
+.form-group{
+    position: relative;
+    background: white;
+    border-bottom: 1px solid aliceblue;
+    padding: .18em 3%;
+}
+.form-group input{
+    border: none;
+    width: 50%;
+    outline: none;
+}
+#errorMsg{
+    color: red;
+    float: right;
+    font-size: .14em;
+    right: 3%;
+}
+/*手机端不使用浮动*/
+@media screen and (max-width: 768px){
+    #errorMsg{
+        position: absolute;
+        top: 8px;
+    }
+}
+
+#getCode{
+    border-radius: .5em;
+    background: white;
+    padding: .2em .5em;
+}
+#button{
+    width: calc(100% - 6%);
+    background: red;
+    border-radius: .5em;
+    color: white;
+    margin: 0 3%;
+    padding: .5em 0;
+    /*字体的大小不继承父元素，默认继承的最顶级font-size*/
+    font-size: .16em;
+}

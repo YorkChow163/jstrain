@@ -1,0 +1,146 @@
+img{
+    vertical-align: middle;
+}
+.wrapper {
+    margin: 0 auto;
+    min-width: 300px;
+    max-width: 640px;
+}
+
+header {
+    background: #333333;
+    overflow: hidden;
+    vertical-align: center;
+}
+
+header a:first-child {
+    float: left;
+
+}
+
+header a:last-child {
+    float: right;
+    border-left: 1px solid white;
+    padding: 0 .15rem;
+}
+
+header a {
+    color: white;
+}
+
+header a img {
+    width: .3rem;
+    height: .3rem;
+    margin: .1rem .05rem;
+}
+
+/*子元素内容垂直居中*/
+header a img, header a span {
+    vertical-align: middle;
+}
+
+#binner img {
+    width: 100%;
+}
+
+.goods {
+    padding: .16rem .08rem;
+    background: gainsboro;
+}
+
+.goodtile {
+    display: flex;
+}
+
+.goodtile span:first-child {
+    background: #468847;
+    flex-basis: 2rem;
+    padding: .1rem .1rem;
+    color: white;
+    text-align: center;
+}
+
+.goodtile span:last-child {
+    border: .01rem solid #468847;
+    padding: .1rem .1rem;
+    text-align: center;
+    color: #468847;
+    flex-grow: 1;
+}
+
+.goodlist ul {
+    overflow: hidden;
+    margin-top: .2rem;
+}
+
+.goodlist ul li {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+/*防止图片溢出，宽度填满*/
+.goodlist ul li img {
+    width: 100%;
+}
+
+.goodlist ul li:nth-child(odd) {
+    padding-left: .04rem;
+
+}
+
+.goodlist ul li:nth-child(even) {
+    padding-right: .04rem;
+}
+
+.gooditem {
+    padding: .1rem .1rem;
+    background: white;
+    overflow: hidden;
+    line-height: .3rem;
+}
+.price{
+    color: #cd4606;
+    font-size: .2rem;
+    float: left;
+}
+.location{
+    float: right;
+}
+footer{
+    position: fixed;
+    background: rebeccapurple;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255,255,255,.4);
+}
+.fanimg{
+    width: .5rem;
+    height: .5rem;
+    position: relative;
+    top: -.2rem;
+    border-radius: 50%;
+    margin-left: .08rem;
+}
+.wrapper-foot{
+    position: relative;
+}
+
+.selected{
+    position: absolute;
+    top: -.4rem;
+    left: .3rem;
+}
+.clickok{
+    float: right;
+    border:.01rem solid green;
+    padding: .05rem .08rem;
+    font-size: .2rem;
+    color: #468847;
+    margin-top: 0.05rem;
+}
+.description{
+
+}
+
